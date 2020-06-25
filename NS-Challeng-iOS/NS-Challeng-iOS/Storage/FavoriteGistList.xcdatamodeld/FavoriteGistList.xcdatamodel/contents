@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FilesData" representedClassName="FilesData" syncable="YES" codeGenerationType="class">
+        <attribute name="filename" optional="YES" attributeType="String"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="GistsData" representedClassName="GistsData" syncable="YES" codeGenerationType="class">
+        <attribute name="comments" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="commnentsUrl" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="gistsDescription" optional="YES" attributeType="String"/>
+        <attribute name="gistsPublic" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="gistsUrl" optional="YES" attributeType="String"/>
+        <attribute name="htmlUrl" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastUpdate" optional="YES" attributeType="String"/>
+        <relationship name="files" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FilesData"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OwnerGist"/>
+    </entity>
+    <entity name="OwnerGist" representedClassName="OwnerGist" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar" optional="YES" attributeType="String"/>
+        <attribute name="gistsURL" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="login" optional="YES" attributeType="String"/>
+        <attribute name="profileURL" optional="YES" attributeType="String"/>
+        <attribute name="repo" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="GistsData" positionX="-54" positionY="-9" width="128" height="223"/>
+        <element name="OwnerGist" positionX="392.37109375" positionY="7.41796875" width="128" height="133"/>
+        <element name="FilesData" positionX="153" positionY="81" width="128" height="28"/>
+    </elements>
+</model>
