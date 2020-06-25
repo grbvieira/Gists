@@ -39,7 +39,7 @@ class GistsViewModel: GistsViewModelContract {
     }
     
     func setDataToSave(data: GistsListViewData) {
-        var builder = GistsBuilder()
+        var builder = FavoritesBuilder()
         let gistData = builder.setDataToSave(data: data).buildGistData()
         self.storage.saveGists(data: gistData)
     }
@@ -48,7 +48,7 @@ class GistsViewModel: GistsViewModelContract {
         self.storage.getSavedGist { result in
             switch result {
             case .success(let data):
-                var builder = GistsBuilder()
+                var builder = FavoritesBuilder()
                 let viewData = builder.setFavorite(data: data).build()
                 completion(.success(viewData))
             case .failure(let error):

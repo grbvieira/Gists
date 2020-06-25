@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08593959CABDAE7AEC6C0A97 /* Pods_NS_Challeng_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B0C66B4FDACD918123E6E0 /* Pods_NS_Challeng_iOS.framework */; };
 		7510B0E624A48328006E5891 /* String+Extension'.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0E524A48328006E5891 /* String+Extension'.swift */; };
+		7510B0EC24A52FE9006E5891 /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */; };
 		7563A41E24A44594006FAD7C /* FilesViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A41D24A44594006FAD7C /* FilesViewData.swift */; };
 		75703D7F24A128EA009A6ED2 /* GistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */; };
 		75703D8124A12901009A6ED2 /* GistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75703D8024A12901009A6ED2 /* GistDetailViewController.xib */; };
@@ -72,6 +73,7 @@
 		38B0C66B4FDACD918123E6E0 /* Pods_NS_Challeng_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NS_Challeng_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58ADABBAC36300888FCA945C /* Pods_NS_Challeng_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NS_Challeng_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7510B0E524A48328006E5891 /* String+Extension'.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension'.swift"; sourceTree = "<group>"; };
+		7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBuilder.swift; sourceTree = "<group>"; };
 		751FDD4C24A4508B00310F81 /* SFUIText-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-RegularItalic.ttf"; sourceTree = "<group>"; };
 		751FDD4D24A4508B00310F81 /* SFUIText-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-LightItalic.ttf"; sourceTree = "<group>"; };
 		751FDD4E24A4508B00310F81 /* SFUIText-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-HeavyItalic.ttf"; sourceTree = "<group>"; };
@@ -153,6 +155,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7510B0E724A52F8A006E5891 /* GistFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				7510B0ED24A5310C006E5891 /* ViewController */,
+				7510B0EA24A52FCC006E5891 /* Builder */,
+				7510B0E924A52FB0006E5891 /* Coorinator */,
+			);
+			path = GistFavorite;
+			sourceTree = "<group>";
+		};
+		7510B0E924A52FB0006E5891 /* Coorinator */ = {
+			isa = PBXGroup;
+			children = (
+				757E5DB324A466F600ABE4BB /* GistFavoritsCoordinator.swift */,
+			);
+			path = Coorinator;
+			sourceTree = "<group>";
+		};
+		7510B0EA24A52FCC006E5891 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		7510B0ED24A5310C006E5891 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				75E080AA24A1880C002969DB /* GistsFavoriteViewController.swift */,
+				75E080AC24A1881A002969DB /* GistsFavoriteViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7510B0EE24A53137006E5891 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				75A0DCA724A027B700CC993A /* ViewModel */,
+				75A0DCB324A0306100CC993A /* ViewData */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		751FDD4B24A4507300310F81 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +285,8 @@
 		75A0DC8D24A01E5700CC993A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				7510B0EE24A53137006E5891 /* Common */,
+				7510B0E724A52F8A006E5891 /* GistFavorite */,
 				75A0DC8F24A01E6600CC993A /* GistList */,
 			);
 			path = Module;
@@ -256,14 +304,12 @@
 		75A0DC8F24A01E6600CC993A /* GistList */ = {
 			isa = PBXGroup;
 			children = (
-				75A0DCB324A0306100CC993A /* ViewData */,
 				75A0DC9624A020C600CC993A /* Coordinator */,
 				75A0DCA424A0263900CC993A /* Router */,
 				75A0DCAA24A0283800CC993A /* Service */,
 				75A0DCB024A0300A00CC993A /* Builder */,
 				75A0DCAD24A02DF400CC993A /* Model */,
 				75A0DCA124A0260300CC993A /* ViewController */,
-				75A0DCA724A027B700CC993A /* ViewModel */,
 			);
 			path = GistList;
 			sourceTree = "<group>";
@@ -272,7 +318,6 @@
 			isa = PBXGroup;
 			children = (
 				75A0DC9724A0210F00CC993A /* GistsListCoordinator.swift */,
-				757E5DB324A466F600ABE4BB /* GistFavoritsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -294,8 +339,6 @@
 				75C3AEB224A0725E00E0AF24 /* GistsListViewController.xib */,
 				75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */,
 				75703D8024A12901009A6ED2 /* GistDetailViewController.xib */,
-				75E080AA24A1880C002969DB /* GistsFavoriteViewController.swift */,
-				75E080AC24A1881A002969DB /* GistsFavoriteViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -651,6 +694,7 @@
 				757E5DB924A4791400ABE4BB /* TabBarCoordinator.swift in Sources */,
 				75A0DC9524A01EAE00CC993A /* AppCoordinator.swift in Sources */,
 				75A0DC6F24A01D8300CC993A /* ViewController.swift in Sources */,
+				7510B0EC24A52FE9006E5891 /* FavoritesBuilder.swift in Sources */,
 				75F0E96C24A3A3D8008BF1A2 /* LoadJsonHelper.swift in Sources */,
 				75A0DC6B24A01D8300CC993A /* AppDelegate.swift in Sources */,
 				75703D7F24A128EA009A6ED2 /* GistDetailViewController.swift in Sources */,
