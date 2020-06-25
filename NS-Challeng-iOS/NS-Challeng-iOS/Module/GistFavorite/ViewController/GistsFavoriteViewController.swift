@@ -29,6 +29,7 @@ class GistsFavoriteViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Favoritos"
         self.getData()
     }
     
@@ -43,7 +44,7 @@ class GistsFavoriteViewController: UIViewController {
             case .success(let data):
                 self.loadObjcs(data: data)
             case .failure(let error):
-                print("\(error)")
+               self.showAlert(title: "Atenção", message: error.localizedDescription)
             }
         }
     }

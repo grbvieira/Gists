@@ -34,6 +34,7 @@ class GistDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.title = "Detalhes do Gist"
         self.setupUI()
     }
     
@@ -52,7 +53,8 @@ class GistDetailViewController: UIViewController {
                 switch response {
                 case .success(let data):
                     self.imageAuthor.image = data.image
-                case .failure:
+                case .failure(let error):
+                    self.showAlert(title: "Atenção", message: error.localizedDescription)
                     return
                 }
             }

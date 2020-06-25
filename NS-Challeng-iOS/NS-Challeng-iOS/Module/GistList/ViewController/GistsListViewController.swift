@@ -34,6 +34,7 @@ class GistsListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Lista de Gists"
         self.stackList.removeAllArrangedSubviews()
         self.scrollView.delegate = self
         self.getDataOffline()
@@ -42,6 +43,7 @@ class GistsListViewController: UIViewController {
     
     private func fetch() {
         fetching = true
+        self.activityIndicator()
         self.viewModel.fetchList(page: page, locally: locally) { result in
             switch result {
             case .success(let response):
@@ -49,7 +51,7 @@ class GistsListViewController: UIViewController {
                 self.loadObjcs(data: response)
             case .failure(let error):
                 self.fetching = false
-                print("Error: \(error)")
+                self.showAlert(title: "Atenção", message: error.localizedDescription)
             }
         }
     }

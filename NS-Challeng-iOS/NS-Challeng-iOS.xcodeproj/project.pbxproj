@@ -10,6 +10,7 @@
 		08593959CABDAE7AEC6C0A97 /* Pods_NS_Challeng_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B0C66B4FDACD918123E6E0 /* Pods_NS_Challeng_iOS.framework */; };
 		7510B0E624A48328006E5891 /* String+Extension'.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0E524A48328006E5891 /* String+Extension'.swift */; };
 		7510B0EC24A52FE9006E5891 /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */; };
+		7510B0F024A534EF006E5891 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0EF24A534EF006E5891 /* UIViewController+Extension.swift */; };
 		7563A41E24A44594006FAD7C /* FilesViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A41D24A44594006FAD7C /* FilesViewData.swift */; };
 		75703D7F24A128EA009A6ED2 /* GistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */; };
 		75703D8124A12901009A6ED2 /* GistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75703D8024A12901009A6ED2 /* GistDetailViewController.xib */; };
@@ -74,6 +75,7 @@
 		58ADABBAC36300888FCA945C /* Pods_NS_Challeng_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NS_Challeng_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7510B0E524A48328006E5891 /* String+Extension'.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension'.swift"; sourceTree = "<group>"; };
 		7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesBuilder.swift; sourceTree = "<group>"; };
+		7510B0EF24A534EF006E5891 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		751FDD4C24A4508B00310F81 /* SFUIText-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-RegularItalic.ttf"; sourceTree = "<group>"; };
 		751FDD4D24A4508B00310F81 /* SFUIText-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-LightItalic.ttf"; sourceTree = "<group>"; };
 		751FDD4E24A4508B00310F81 /* SFUIText-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-HeavyItalic.ttf"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		7510B0EE24A53137006E5891 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				75C3AEB424A07D9B00E0AF24 /* View */,
 				75A0DCA724A027B700CC993A /* ViewModel */,
 				75A0DCB324A0306100CC993A /* ViewData */,
 			);
@@ -334,7 +337,6 @@
 		75A0DCA124A0260300CC993A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				75C3AEB424A07D9B00E0AF24 /* View */,
 				75A0DC9024A01E8B00CC993A /* GistsListViewController.swift */,
 				75C3AEB224A0725E00E0AF24 /* GistsListViewController.xib */,
 				75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */,
@@ -409,6 +411,7 @@
 				75E080A824A13721002969DB /* Decodable+Extension.swift */,
 				75F0E96024A31156008BF1A2 /* UIStack+Extension.swift */,
 				7510B0E524A48328006E5891 /* String+Extension'.swift */,
+				7510B0EF24A534EF006E5891 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				75A0DC9524A01EAE00CC993A /* AppCoordinator.swift in Sources */,
 				75A0DC6F24A01D8300CC993A /* ViewController.swift in Sources */,
 				7510B0EC24A52FE9006E5891 /* FavoritesBuilder.swift in Sources */,
+				7510B0F024A534EF006E5891 /* UIViewController+Extension.swift in Sources */,
 				75F0E96C24A3A3D8008BF1A2 /* LoadJsonHelper.swift in Sources */,
 				75A0DC6B24A01D8300CC993A /* AppDelegate.swift in Sources */,
 				75703D7F24A128EA009A6ED2 /* GistDetailViewController.swift in Sources */,
