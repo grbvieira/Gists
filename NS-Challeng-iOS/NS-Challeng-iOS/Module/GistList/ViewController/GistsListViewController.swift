@@ -88,7 +88,6 @@ class GistsListViewController: UIViewController {
     
     private func activityIndicator() {
         let loadingView = UIActivityIndicatorView()
-        loadingView.color = .black
         loadingView.startAnimating()
         stackList.addArrangedSubview(loadingView)
     }
