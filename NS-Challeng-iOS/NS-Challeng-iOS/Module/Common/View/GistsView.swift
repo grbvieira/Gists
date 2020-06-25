@@ -23,6 +23,8 @@ class GistsView: NibView {
     
     var callBack: ((_ viewData: GistsListViewData, _ actionType: ActionCallBack )-> Void)?
     var viewData: GistsListViewData
+    var favorite: Bool = false
+    
     required init(data: GistsListViewData) {
         self.viewData = data
         super.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
@@ -37,8 +39,9 @@ class GistsView: NibView {
         self.getImage(viewData: viewData)
         self.nameLbl.text = viewData.owner.login
         self.fileTypeLbl.text = "file type: " + viewData.files.type
-        self.setStarColor(favorite: viewData.favorite)
-        
+        self.favorite = viewData.favorite
+        self.setStarColor(favorite: self.favorite)
+    
         self.avatarImg.layer.borderWidth=1.0
         self.avatarImg.layer.masksToBounds = false
         self.avatarImg.layer.borderColor = UIColor.white.cgColor
@@ -101,11 +104,13 @@ class GistsView: NibView {
     
     @IBAction func addFavoritesAction(_ sender: Any) {
         guard let cb = self.callBack else { return }
-        self.favoriteLbl.setImage(UIImage(named: "star"), for: .normal)
-        if self.viewData.favorite {
-            self.setStarColor(favorite: false)
+        if favorite {
+            self.favorite = false
+            self.setStarColor(favorite: favorite)
             cb(self.viewData, .delete)
         } else {
+            self.favorite = true
+            self.setStarColor(favorite: favorite)
             cb(self.viewData, .addFavorite)
         }
     }
