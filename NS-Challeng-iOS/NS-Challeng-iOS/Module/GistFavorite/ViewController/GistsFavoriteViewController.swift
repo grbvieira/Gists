@@ -71,7 +71,7 @@ class GistsFavoriteViewController: UIViewController {
     // MARK: - Actions
     func navigateToDetail(viewData: GistsListViewData) {
         let controller = GistDetailViewController(with: viewData)
-        self.navigationController?.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
