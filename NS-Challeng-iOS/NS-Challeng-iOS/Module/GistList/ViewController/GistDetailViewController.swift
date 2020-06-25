@@ -15,12 +15,15 @@ class GistDetailViewController: UIViewController {
     //MARK: - GistsListViewData
     var viewData: GistsListViewData
     
-    //MARK: - Labels
+    // MARK: - Properties
     @IBOutlet weak var imageAuthor: UIImageView!
     @IBOutlet weak var nameAuthorLbl: UILabel!
     @IBOutlet weak var fileType: UILabel!
     @IBOutlet weak var createAtLbl: UILabel!
     @IBOutlet weak var updateAtLbl: UILabel!
+    @IBOutlet weak var numberOfComments: UILabel!
+    @IBOutlet weak var nameGistLbl: UIButton!
+    @IBOutlet weak var publicStatusImage: UIImageView!
     
     
     required init(with data: GistsListViewData) {
@@ -32,17 +35,23 @@ class GistDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
          self.title = "Detalhes do Gist"
         self.setupUI()
     }
     
+     // MARK: - UI Setup
     private func setupUI() {
         self.nameAuthorLbl.text = viewData.owner.login
         self.fileType.text = "Tipo: " + viewData.files.type
         self.createAtLbl.text = "Data de criação: \n" + viewData.createdAt.dateFormatter()
         self.updateAtLbl.text = "Data de atualização: \n" + viewData.lastUpdate.dateFormatter()
+        self.numberOfComments.text = "Comentários: " +  String(describing: viewData.comments)
+        self.nameGistLbl.setTitle(viewData.files.filename, for: .normal)
+        let statusString = viewData.gistsPublic ? "yes" : "no"
+        self.publicStatusImage.image = UIImage(named: statusString)
         self.getImage(viewData: viewData)
     }
     
@@ -70,4 +79,11 @@ class GistDetailViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - Actions
+    @IBAction func openWebView(_ sender: Any) {
+        let controller = WebViewController(with: viewData.htmlUrl)
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }

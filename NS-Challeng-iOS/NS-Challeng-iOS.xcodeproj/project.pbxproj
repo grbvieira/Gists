@@ -11,6 +11,7 @@
 		7510B0E624A48328006E5891 /* String+Extension'.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0E524A48328006E5891 /* String+Extension'.swift */; };
 		7510B0EC24A52FE9006E5891 /* FavoritesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0EB24A52FE9006E5891 /* FavoritesBuilder.swift */; };
 		7510B0F024A534EF006E5891 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7510B0EF24A534EF006E5891 /* UIViewController+Extension.swift */; };
+		754E959624A5455600EB82B9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754E959524A5455600EB82B9 /* WebKit.framework */; };
 		7563A41E24A44594006FAD7C /* FilesViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A41D24A44594006FAD7C /* FilesViewData.swift */; };
 		75703D7F24A128EA009A6ED2 /* GistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */; };
 		75703D8124A12901009A6ED2 /* GistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75703D8024A12901009A6ED2 /* GistDetailViewController.xib */; };
@@ -42,6 +43,8 @@
 		75C3AEB624A07DB000E0AF24 /* GistsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75C3AEB524A07DB000E0AF24 /* GistsView.xib */; };
 		75C3AEB824A07DBA00E0AF24 /* GistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3AEB724A07DBA00E0AF24 /* GistsView.swift */; };
 		75C3AEBA24A07E2000E0AF24 /* UIView+NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C3AEB924A07E1F00E0AF24 /* UIView+NibView.swift */; };
+		75CC5C3824A540970077FB89 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CC5C3724A540970077FB89 /* WebViewController.swift */; };
+		75CC5C3A24A540C10077FB89 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75CC5C3924A540C10077FB89 /* WebViewController.xib */; };
 		75E080A124A135BC002969DB /* FavoriteGistList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75E0809F24A135BC002969DB /* FavoriteGistList.xcdatamodeld */; };
 		75E080A524A136C6002969DB /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E080A424A136C6002969DB /* StorageProtocol.swift */; };
 		75E080A724A136D8002969DB /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E080A624A136D8002969DB /* Storage.swift */; };
@@ -88,6 +91,7 @@
 		751FDD5524A4508C00310F81 /* SFUIText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Light.ttf"; sourceTree = "<group>"; };
 		751FDD5624A4508C00310F81 /* SFUIText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Medium.ttf"; sourceTree = "<group>"; };
 		751FDD5724A4508C00310F81 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
+		754E959524A5455600EB82B9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		7563A41D24A44594006FAD7C /* FilesViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewData.swift; sourceTree = "<group>"; };
 		75703D7E24A128EA009A6ED2 /* GistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistDetailViewController.swift; sourceTree = "<group>"; };
 		75703D8024A12901009A6ED2 /* GistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistDetailViewController.xib; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 		75C3AEB524A07DB000E0AF24 /* GistsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistsView.xib; sourceTree = "<group>"; };
 		75C3AEB724A07DBA00E0AF24 /* GistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsView.swift; sourceTree = "<group>"; };
 		75C3AEB924A07E1F00E0AF24 /* UIView+NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibView.swift"; sourceTree = "<group>"; };
+		75CC5C3724A540970077FB89 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		75CC5C3924A540C10077FB89 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		75E080A024A135BC002969DB /* FavoriteGistList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteGistList.xcdatamodel; sourceTree = "<group>"; };
 		75E080A424A136C6002969DB /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		75E080A624A136D8002969DB /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -142,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754E959624A5455600EB82B9 /* WebKit.framework in Frameworks */,
 				08593959CABDAE7AEC6C0A97 /* Pods_NS_Challeng_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +295,7 @@
 		75A0DC8D24A01E5700CC993A /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				75CC5C3624A540500077FB89 /* WebView */,
 				7510B0EE24A53137006E5891 /* Common */,
 				7510B0E724A52F8A006E5891 /* GistFavorite */,
 				75A0DC8F24A01E6600CC993A /* GistList */,
@@ -425,6 +433,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		75CC5C3624A540500077FB89 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				75CC5C3724A540970077FB89 /* WebViewController.swift */,
+				75CC5C3924A540C10077FB89 /* WebViewController.xib */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		75E080A224A135E2002969DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +505,7 @@
 		D991A03494A8E745C181BC64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				754E959524A5455600EB82B9 /* WebKit.framework */,
 				38B0C66B4FDACD918123E6E0 /* Pods_NS_Challeng_iOS.framework */,
 				58ADABBAC36300888FCA945C /* Pods_NS_Challeng_iOSTests.framework */,
 			);
@@ -582,6 +600,7 @@
 				75E116F824A3AF0F0034CA64 /* GistsMockReponse.json in Resources */,
 				75A0DC7724A01D8400CC993A /* LaunchScreen.storyboard in Resources */,
 				75C3AEB324A0725E00E0AF24 /* GistsListViewController.xib in Resources */,
+				75CC5C3A24A540C10077FB89 /* WebViewController.xib in Resources */,
 				75E080AD24A1881A002969DB /* GistsFavoriteViewController.xib in Resources */,
 				75703D8124A12901009A6ED2 /* GistDetailViewController.xib in Resources */,
 				75A0DC7424A01D8400CC993A /* Assets.xcassets in Resources */,
@@ -715,6 +734,7 @@
 				75E080A524A136C6002969DB /* StorageProtocol.swift in Sources */,
 				75A0DC9124A01E8B00CC993A /* GistsListViewController.swift in Sources */,
 				75A0DC9E24A0216700CC993A /* Result.swift in Sources */,
+				75CC5C3824A540970077FB89 /* WebViewController.swift in Sources */,
 				75A0DCB724A0559F00CC993A /* OwnerViewData.swift in Sources */,
 				75A0DC9824A0210F00CC993A /* GistsListCoordinator.swift in Sources */,
 				75E080A924A13721002969DB /* Decodable+Extension.swift in Sources */,
